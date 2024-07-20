@@ -1,0 +1,13 @@
+B1: pip install -r requirements.txt
+
+B2: python src/align_dataset_mtcnn.py  Dataset/FaceData/raw Dataset/FaceData/processed --image_size 160 --margin 32  --random_order --gpu_memory_fraction 0.25
+nếu lỗi thì sửa thành python3: 
+python3 src/align_dataset_mtcnn.py  Dataset/FaceData/raw Dataset/FaceData/processed --image_size 160 --margin 32  --random_order --gpu_memory_fraction 0.25
+
+B3: python src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000
+lỗi thì sửa thành python3
+python3 src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000
+
+B4: python src/face_rec_cam.py
+lỗi thì sửa thành python3
+python3 src/face_rec_cam.py
